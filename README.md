@@ -21,8 +21,8 @@ flowchart LR
     A[RF-DETR ONNX] --> B[patch_gridsample.py]
     B --> C[已修补 ONNX: 不含 GridSample]
     C --> D{转换精度}
-    D -->|FP16| E[onnx2rknn-simplify.py 或 onnx2rknn.py]
-    D -->|INT8| F[onnx2rknn_int8_simplify.py 或 onnx2rknn-int8.py]
+    D -->|FP16| E[onnx2rknn-simplify.py]
+    D -->|INT8| F[onnx2rknn_int8_simplify.py]
     E --> G[RKNN 模型]
     F --> G
     G --> H[rknn_detect_simplify.cpp]
