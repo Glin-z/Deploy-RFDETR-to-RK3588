@@ -25,10 +25,8 @@ flowchart LR
     D -->|INT8| F[onnx2rknn_int8_simplify.py 或 onnx2rknn-int8.py]
     E --> G[RKNN 模型]
     F --> G
-    G --> H[rknn_detect_usb.cpp]
-    G --> I[rknn_detect_simplify.cpp]
-    H --> J[USB 摄像头, 异步采集/推理, 显示]
-    I --> K[USB 摄像头, 同步推理, 显示]
+    G --> H[rknn_detect_simplify.cpp]
+    H --> I[USB 摄像头, 同步推理, 显示]
 ```
 
 ### 1. 重写 `GridSample`
