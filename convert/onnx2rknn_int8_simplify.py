@@ -1,10 +1,3 @@
-# ------------------------------------------------------------------------
-# RF-DETR
-# Copyright (c) 2025 Roboflow. All Rights Reserved.
-# Licensed under the Apache License, Version 2.0 [see LICENSE for details]
-# ------------------------------------------------------------------------
-"""Minimal ONNX to RKNN INT8 converter for RK3588."""
-
 from __future__ import annotations
 
 import argparse
@@ -19,7 +12,6 @@ STD = [[58.395, 57.12, 57.375]]
 
 
 def main() -> int:
-    """Quantize a fixed-shape RF-DETR ONNX model and export an RKNN file."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--onnx", type=Path, default=DEFAULT_ONNX, help="Patched 1x3x512x512 ONNX model")
     parser.add_argument("--calib-dir", type=Path, required=True, help="Representative calibration image directory")
